@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -65,7 +64,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        BaseLayer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -85,7 +84,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        lower_layer {
+        ExtendLayer {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -95,17 +94,17 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans          &trans          &trans           &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &none            &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME  &none
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &none
-&sys_reset  &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans           &none           &none           &none            &none     &none
-                                        &trans        &tog 0        &kp SPACE     &trans    &trans  &kp RIGHT_SHIFT  &tog 2          &trans
+&none       &none   &none   &none   &none        &none                                       &trans           &trans          &trans          &trans           &trans    &trans
+&kp F1      &kp F2  &kp F3  &kp F4  &kp F5       &kp F6                                      &none            &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME  &none
+&none       &none   &none   &none   &none        &none                                       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &none
+&sys_reset  &trans  &trans  &trans  &trans       &trans                    &trans    &trans  &trans           &none           &none           &none            &none     &none
+                            &trans  &lt 0 LCTRL  &HomeRow_mods LALT SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 2          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer {
+        NumberLayer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -115,11 +114,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                       &trans           &trans        &trans        &trans        &trans  &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                       &none            &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                       &trans           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none   &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &trans    &trans  &none            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &none
-                           &trans   &tog 0   &kp SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 1        &trans
+&trans  &trans  &trans  &trans  &trans       &trans                                          &trans           &trans        &trans        &trans        &trans  &trans
+&none   &none   &none   &none   &none        &none                                           &none            &kp N7        &kp N8        &kp N9        &kp N0  &trans
+&none   &none   &none   &none   &none        &none                                           &trans           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none   &trans
+&none   &none   &none   &none   &none        &none                         &trans    &trans  &none            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &none
+                        &trans  &lt 0 LCTRL  &HomeRow_mods LEFT_ALT SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 1        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
