@@ -94,11 +94,11 @@
 
             display-name = "Base";
             bindings = <
-&none                  &none  &none  &none   &none        &none                                         &none          &none        &none  &none      &none       &none
-&AltTap                &kp W  &kp E  &AltF4  &kp T        &none                                         &none          &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A                  &kp S  &kp D  &kp F   &kp G        &none                                         &none          &kp H        &kp J  &kp K      &kp L       &kp SEMICOLON
-&HomeRow_mods LCTRL Z  &kp X  &kp C  &kp V   &kp B        &none                         &none    &none  &none          &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-                                     &none   &lt 1 LCTRL  &HomeRow_mods LEFT_ALT SPACE  &none    &none  &kp BACKSPACE  &lt 2 ENTER  &none
+&none                  &none  &none  &none   &none        &none                                         &none                                &none        &none  &none      &none       &none
+&AltTap                &kp W  &kp E  &AltF4  &kp T        &none                                         &none                                &kp Y        &kp U  &kp I      &kp O       &kp P
+&kp A                  &kp S  &kp D  &kp F   &kp G        &none                                         &none                                &kp H        &kp J  &kp K      &kp L       &kp SEMICOLON
+&HomeRow_mods LCTRL Z  &kp X  &kp C  &kp V   &kp B        &none                         &none    &none  &none                                &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+                                     &none   &lt 1 LCTRL  &HomeRow_mods LEFT_ALT SPACE  &none    &none  &HomeRow_mods RIGHT_SHIFT BACKSPACE  &lt 2 ENTER  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
