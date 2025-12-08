@@ -114,11 +114,11 @@
 
             display-name = "Lower";
             bindings = <
-&none       &none         &none   &none           &none      &none                                       &trans           &trans          &trans          &trans           &trans                         &trans
-&kp F1      &kp W         &kp F3  &kp F4          &kp F5     &none                                       &none            &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                       &none
-&kp LCTRL   &kp LEFT_ALT  &none   &kp LEFT_SHIFT  &none      &none                                       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &HomeRow_mods RIGHT_SHIFT END  &none
-&sys_reset  &trans        &trans  &trans          &trans     &trans                    &trans    &trans  &trans           &none           &none           &none            &none                          &none
-                                  &trans          &kp LCTRL  &HomeRow_mods LALT SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 2          &trans
+&none      &none         &none   &none           &none   &none                     &trans           &trans          &trans          &trans           &trans                         &trans
+&kp F1     &kp F2        &kp F3  &kp F4          &kp F5  &none                     &none            &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                       &none
+&kp LCTRL  &kp LEFT_ALT  &none   &kp LEFT_SHIFT  &none   &none                     &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &HomeRow_mods RIGHT_SHIFT END  &none
+&kt LCTRL  &trans        &trans  &trans          &trans  &trans  &trans    &trans  &trans           &none           &none           &none            &none                          &none
+                                 &trans          &none   &none   &trans    &trans  &kp RIGHT_SHIFT  &none           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -134,11 +134,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans        &trans  &trans          &trans       &trans                                          &trans           &trans        &trans        &trans        &trans  &trans
-&none      &none         &none   &none           &none        &none                                           &none            &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&kp LCTRL  &kp LEFT_ALT  &none   &kp LEFT_SHIFT  &none        &none                                           &trans           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none   &trans
-&none      &none         &none   &none           &none        &none                         &trans    &trans  &none            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &none
-                                 &trans          &lt 0 LCTRL  &HomeRow_mods LEFT_ALT SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 2        &trans
+&trans          &trans        &trans        &trans          &trans       &trans                                          &trans           &trans        &trans        &trans        &trans        &trans
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5       &none                                           &none            &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0
+&kp LEFT_SHIFT  &kp LEFT_ALT  &none         &kp LEFT_SHIFT  &none        &none                                           &trans           &none         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
+&kp LCTRL       &none         &none         &none           &none        &none                         &trans    &trans  &none            &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+                                            &trans          &lt 0 LCTRL  &HomeRow_mods LEFT_ALT SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 2        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
