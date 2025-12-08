@@ -19,7 +19,7 @@
 
         window {
             bindings = <&kp LEFT_WIN>;
-            key-positions = <50 51>;
+            key-positions = <51 52>;
         };
 
         Enter {
