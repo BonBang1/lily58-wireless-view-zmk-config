@@ -114,10 +114,10 @@
 
             display-name = "Lower";
             bindings = <
-&none       &none         &none   &none           &none      &none                                       &trans           &trans          &trans          &trans           &trans    &trans
-&kp F1      &kp W         &kp F3  &kp F4          &kp F5     &none                                       &none            &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME  &none
-&kp LCTRL   &kp LEFT_ALT  &none   &kp LEFT_SHIFT  &none      &none                                       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END   &none
-&sys_reset  &trans        &trans  &trans          &trans     &trans                    &trans    &trans  &trans           &none           &none           &none            &none     &none
+&none       &none         &none   &none           &none      &none                                       &trans           &trans          &trans          &trans           &trans                         &trans
+&kp F1      &kp W         &kp F3  &kp F4          &kp F5     &none                                       &none            &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN    &kp HOME                       &none
+&kp LCTRL   &kp LEFT_ALT  &none   &kp LEFT_SHIFT  &none      &none                                       &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &HomeRow_mods RIGHT_SHIFT END  &none
+&sys_reset  &trans        &trans  &trans          &trans     &trans                    &trans    &trans  &trans           &none           &none           &none            &none                          &none
                                   &trans          &kp LCTRL  &HomeRow_mods LALT SPACE  &trans    &trans  &kp RIGHT_SHIFT  &tog 2          &trans
             >;
 
