@@ -46,6 +46,11 @@
             bindings = <&kp TAB>;
             key-positions = <25 26>;
         };
+
+        AltF4 {
+            bindings = <&none>;
+            key-positions = <50 3>;
+        };
     };
 
     behaviors {
